@@ -39,10 +39,10 @@ func GetPeopleInfo(p People) {
 }
 
 func main() {
-	//Initialize customer object
+	//Initialize customer structure
 	customer := Customer{Name: "Customer 1", Address: "Address 1"}
 
-	//Initialize employee object
+	//Initialize employee structure
 	employee := Employee{Name: "Employee 1", Salary: 3000}
 
 	GetPeopleInfo(customer)
