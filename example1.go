@@ -58,9 +58,9 @@ func main() {
 
 	fmt.Println(mp["Indonesia"])
 
-	for country, names := range mp {
-		for _, name := range names {
-			fmt.Println("\nName: " + name.Name + "\nAddress: " + name.Address + "\nCountry: " + country + "\n")
+	for country, customers := range mp {
+		for _, customer := range customers {
+			fmt.Println("\nName: " + customer.Name + "\nAddress: " + customer.Address + "\nCountry: " + country + "\n")
 		}
 	}
 
