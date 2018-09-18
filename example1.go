@@ -48,6 +48,12 @@ func main() {
 	GetPeopleInfo(customer)
 	GetPeopleInfo(employee)
 
+	ch := make(chan string)
+	go customer.GetInfo(ch)
+	result := <-ch
+	fmt.Println(result)
+
+	//Map example
 	mp := make(map[string][]Customer)
 
 	customers := []Customer{
@@ -56,7 +62,7 @@ func main() {
 
 	mp["Indonesia"] = customers
 
-	fmt.Println(mp["Indonesia"])
+	fmt.Println("\n", mp["Indonesia"])
 
 	for country, customers := range mp {
 		for _, customer := range customers {
